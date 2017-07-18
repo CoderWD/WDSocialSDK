@@ -19,5 +19,6 @@ target "WDSocialSDKExample" do
     
 #    pod 'WeiboSDK', '~>3.1.3'
 #    pod 'WechatOpenSDK', '~> 1.7.7'
+    pod 'WDSocialSDK'
 
 end
