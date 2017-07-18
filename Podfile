@@ -7,7 +7,7 @@ target "WDSocialSDK" do
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
 
-    pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+#    pod 'WeiboSDK', '~>3.1.3'
     pod 'WechatOpenSDK', '~> 1.7.7'
 
 end
@@ -17,7 +17,7 @@ target "WDSocialSDKExample" do
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
     
-    pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+#    pod 'WeiboSDK', '~>3.1.3'
     pod 'WechatOpenSDK', '~> 1.7.7'
     
 end
