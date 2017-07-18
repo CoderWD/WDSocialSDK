@@ -19,7 +19,7 @@ s.platform     = :ios, '7.0'
 s.requires_arc = true
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 s.source_files = 'WDSocialSDK/*.{h,m}'
-#s.ios.vendored_frameworks = 'WDSocialSDK/TencentOpenAPI/TencentOpenAPI.framework'
+# s.ios.vendored_frameworks = 'WDSocialSDK/TencentOpenAPI/TencentOpenAPI.framework'
 
 # s.ios.exclude_files = 'Classes/osx'
 # s.osx.exclude_files = 'Classes/ios'
@@ -27,7 +27,7 @@ s.source_files = 'WDSocialSDK/*.{h,m}'
 s.frameworks = 'Foundation', 'UIKit','Security','SystemConfiguration','CoreGraphics','CoreTelephony','QuartzCore','ImageIO','CoreText','CFNetwork'
 s.libraries = 'iconv', 'sqlite3','stdc++','z','c++'
 
-#s.dependency 'WechatOpenSDK', '~> 1.7.8'
+# s.dependency 'WechatOpenSDK', '~> 1.7.8'
 
     s.subspec 'libWeiboSDK' do |wb|
         wb.source_files = 'WDSocialSDK/SDK/Weibo3.2.0'
