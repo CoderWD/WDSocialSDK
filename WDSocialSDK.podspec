@@ -10,8 +10,8 @@ spec.authors      = { 'Coder He' => 'heweidong@outlook.com' }
 spec.summary      = 'Wechat,QQ,Webo Social share and authorization'
 spec.source       = { :https://github.com/CoderWD/WDSocialSDK.git', :tag => spec.version.to_s }
 spec.source_files = 'WDSocialSDK.{h,m}'
-s.frameworks = 'Foundation', 'UIKit'
-s.ios.vendored_frameworks = 'WDSocialSDK/TencentOpenAPI/TencentOpenAPI.framework'
+spec.frameworks = 'Foundation', 'UIKit'
+spec.ios.vendored_frameworks = 'WDSocialSDK/TencentOpenAPI/TencentOpenAPI.framework'
 spec.dependency 'WechatOpenSDK', '~> 1.7.8'
 spec.dependency 'WeiboSDK', '~> 3.2.0'
 end
