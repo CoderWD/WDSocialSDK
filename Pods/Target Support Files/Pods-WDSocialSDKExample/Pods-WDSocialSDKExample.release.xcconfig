@@ -1,8 +1,10 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/WDSocialSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/WDSocialSDK/WDSocialSDK/SDK/Tencent3.2.3"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/WDSocialSDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/WDSocialSDK/WDSocialSDK.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "WDSocialSDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/WDSocialSDK/WDSocialSDK/SDK/Wechat1.7.8" "${PODS_ROOT}/WDSocialSDK/WDSocialSDK/SDK/Weibo3.2.0"
+OTHER_CFLAGS = $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/WDSocialSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"WeChatSDK" -l"WeiboSDK" -l"c++" -l"iconv" -l"sqlite3" -l"stdc++" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "ImageIO" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "TencentOpenAPI" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

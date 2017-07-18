@@ -1,0 +1,1 @@
+../../../WDSocialSDK/WDSocialSDK/SDK/Weibo3.2.0/WBHttpRequest+WeiboToken.h

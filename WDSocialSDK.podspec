@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "WDSocialSDK"
-s.version          = "0.0.1"
+s.version          = "0.0.2"
 s.summary          = "Wechat,QQ,Webo Social share and authorization"
 s.description      = <<-DESC
 It is a Social SDK use on ios by Objective-c.
@@ -19,12 +19,11 @@ s.platform     = :ios, '7.0'
 s.requires_arc = true
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 s.source_files = 'WDSocialSDK/*.{h,m}'
-s.source_files = 'WDSocialSDK/SDK/Weibo3.2.0/*.{h,m}'
-s.source_files = 'WDSocialSDK/SDK/Tencent3.2.3/*.{h,m}'
-s.source_files = 'WDSocialSDK/SDK/Wechat1.7.8/*.{h,m}'
+s.source_files = 'WDSocialSDK/SDK/Weibo3.2.0/*.{h,m}','WDSocialSDK/SDK/Tencent3.2.3/*.{h,m}','WDSocialSDK/SDK/Wechat1.7.8/*.{h,m,txt}'
 
 s.ios.vendored_frameworks = 'WDSocialSDK/SDK/Tencent3.2.3/TencentOpenAPI.framework'
 s.vendored_libraries = 'WDSocialSDK/SDK/Wechat1.7.8/libWeChatSDK.a', 'WDSocialSDK/SDK/Weibo3.2.0/libWeiboSDK.a'
+s.vendored_resources = 'WDSocialSDK/SDK/Wechat1.7.8/WeiboSDK.bundle'
 
 # s.ios.exclude_files = 'Classes/osx'
 # s.osx.exclude_files = 'Classes/ios'
