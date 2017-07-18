@@ -22,21 +22,17 @@
 		130EB43E7CCDC20B1B3A7006C99149B4 /* Pods_WDSocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WDSocialSDK.framework; path = "Pods-WDSocialSDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217FF1B6E6E8A57EBF32478425E78EAF /* Pods-WDSocialSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WDSocialSDK.modulemap"; sourceTree = "<group>"; };
 		29383466208E8B10AA5ED928DFD32DC1 /* Pods-WDSocialSDKExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDSocialSDKExample.release.xcconfig"; sourceTree = "<group>"; };
-		38FF1D1D1803C0A53DC6187EC0D5247F /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.7.8/libWeChatSDK.a; sourceTree = "<group>"; };
 		44EB3ECE691050D31F9E81730605CD93 /* Pods-WDSocialSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDSocialSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
 		475EA44329AEC5A3AD2011ADF741FEC7 /* Pods-WDSocialSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WDSocialSDK-resources.sh"; sourceTree = "<group>"; };
 		4F2AE95A34B61A360A7676F2A5DA659B /* Pods-WDSocialSDKExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WDSocialSDKExample-dummy.m"; sourceTree = "<group>"; };
 		51A3BDC59CCDFC08EC075259F230C8C4 /* Pods-WDSocialSDKExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WDSocialSDKExample-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67F0EE34583F0302771B51EA2F1F496E /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.7.8/WXApiObject.h; sourceTree = "<group>"; };
 		89EF272BA1B9768BED9EDB562568E128 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A956960B7133D2F73E869C839E9C39E8 /* Pods-WDSocialSDKExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WDSocialSDKExample-frameworks.sh"; sourceTree = "<group>"; };
-		B07FC7089D98EBFC3B8317CA9C4DB0DC /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.7.8/WechatAuthSDK.h; sourceTree = "<group>"; };
 		C351B47A1D866A5B65C8F033337E4E07 /* Pods-WDSocialSDKExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WDSocialSDKExample-resources.sh"; sourceTree = "<group>"; };
 		C39ED3D927EB35910ACABF443473A7E3 /* Pods-WDSocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDSocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		CEFB963D1CA2D6563EC1C84F1BEFA284 /* Pods-WDSocialSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDSocialSDK.release.xcconfig"; sourceTree = "<group>"; };
-		DAF3CC6B0BEA211B1193E827C69EAD28 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.7.8/WXApi.h; sourceTree = "<group>"; };
 		DD088F5ACDCCE6CAA33C10E6283FE27A /* Pods-WDSocialSDKExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WDSocialSDKExample.modulemap"; sourceTree = "<group>"; };
 		DE377882EC386B4514B3F0449EA57D07 /* Pods_WDSocialSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WDSocialSDKExample.framework; path = "Pods-WDSocialSDKExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4153C715DA028231160B68F4C534AA6 /* Pods-WDSocialSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WDSocialSDK-umbrella.h"; sourceTree = "<group>"; };
@@ -118,20 +114,11 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7ADA45F435BB210C822629C0D9B54295 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DBC36B9FCA69B459F3290EF4F4D65F3C /* WechatOpenSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7ADA45F435BB210C822629C0D9B54295 /* Pods */,
 				1EB5961BF3B5FA466433E6CEF6B5DE4C /* Products */,
 				4EC79E17E262FF139082BDCDFCD84126 /* Targets Support Files */,
 			);
@@ -151,26 +138,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		D72B82584291F30383CE0E8EB710C3D3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				38FF1D1D1803C0A53DC6187EC0D5247F /* libWeChatSDK.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DBC36B9FCA69B459F3290EF4F4D65F3C /* WechatOpenSDK */ = {
-			isa = PBXGroup;
-			children = (
-				B07FC7089D98EBFC3B8317CA9C4DB0DC /* WechatAuthSDK.h */,
-				DAF3CC6B0BEA211B1193E827C69EAD28 /* WXApi.h */,
-				67F0EE34583F0302771B51EA2F1F496E /* WXApiObject.h */,
-				D72B82584291F30383CE0E8EB710C3D3 /* Frameworks */,
-			);
-			name = WechatOpenSDK;
-			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

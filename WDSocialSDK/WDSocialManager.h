@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WeiboSDK.h"
-#import <WechatOpenSDK/WXApi.h>
+#import "WXApi.h"
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 

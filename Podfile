@@ -8,7 +8,7 @@ target "WDSocialSDK" do
     use_frameworks!
 
 #    pod 'WeiboSDK', '~>3.1.3'
-    pod 'WechatOpenSDK', '~> 1.7.7'
+#    pod 'WechatOpenSDK', '~> 1.7.7'
 
 end
 
@@ -18,6 +18,6 @@ target "WDSocialSDKExample" do
     use_frameworks!
     
 #    pod 'WeiboSDK', '~>3.1.3'
-    pod 'WechatOpenSDK', '~> 1.7.7'
-    
+#    pod 'WechatOpenSDK', '~> 1.7.7'
+
 end
