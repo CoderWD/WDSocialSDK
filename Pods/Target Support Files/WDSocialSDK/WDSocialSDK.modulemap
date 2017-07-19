@@ -1,0 +1,6 @@
+framework module WDSocialSDK {
+  umbrella header "WDSocialSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
