@@ -1,13 +1,13 @@
 PODS:
-  - WDSocialSDK (0.0.6):
-    - WDSocialSDK/SDK (= 0.0.6)
-  - WDSocialSDK/SDK (0.0.6)
+  - WDSocialSDK (0.0.7):
+    - WDSocialSDK/Component (= 0.0.7)
+  - WDSocialSDK/Component (0.0.7)
 
 DEPENDENCIES:
   - WDSocialSDK
 
 SPEC CHECKSUMS:
-  WDSocialSDK: ea678c113538b4790810469932ad345c9378fd38
+  WDSocialSDK: 41a27160b718665cffa526d89e9e0ca422f89c79
 
 PODFILE CHECKSUM: 133677711df31b94fd1fafd273dfa8843a1f10f2
 

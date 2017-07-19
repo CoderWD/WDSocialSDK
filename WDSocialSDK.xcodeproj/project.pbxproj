@@ -274,6 +274,7 @@
 				B6326C541F1DA84D0074EA46 /* Headers */,
 				B6326C551F1DA84D0074EA46 /* Resources */,
 				8108A7CF35EAEDF4875BA189 /* [CP] Copy Pods Resources */,
+				B6A8E84C1F1F379600B40DAB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -454,6 +455,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B6A8E84C1F1F379600B40DAB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${ACTION}\" = \"build\" ]\nthen\nINSTALL_DIR=${SRCROOT}/WDSocialSDK/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n#open \"${SRCROOT}/Products\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
