@@ -390,7 +390,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-resources.sh",
-				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/WDSocialSDK/WDSocialSDK/SDK/Weibo3.2.0/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
