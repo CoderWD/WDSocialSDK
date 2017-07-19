@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "WDSocialSDK"
-s.version          = "0.0.4"
+s.version          = "0.0.5"
 s.summary          = "Wechat,QQ,Webo Social share and authorization"
 s.description      = <<-DESC
 It is a Social SDK use on ios by Objective-c.
@@ -18,9 +18,14 @@ s.platform     = :ios, '7.0'
 # s.osx.deployment_target = '10.7'
 s.requires_arc = true
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
-# s.source_files  = 'WDSocialSDK/**/*.{h,m}'
+
+s.subspec 'SDK' do |sdk|
+    sdk.source_files = 'WDSocialSDK/SDK/Wechat1.7.8'
+    sdk.source_files = 'WDSocialSDK/SDK/Weibo3.2.0'
+end
+
 s.source_files = 'WDSocialSDK/*.{h,m}'
-#s.source_files = 'WDSocialSDK/SDK/Weibo3.2.0/*.{h,m}'
+s.source_files = 'WDSocialSDK/SDK/Weibo3.2.0/*.{h,m}'
 #s.source_files = 'WDSocialSDK/SDK/Wechat1.7.8/*.{h,m,txt}'
 
 s.ios.vendored_frameworks = 'WDSocialSDK/SDK/Tencent3.2.3/TencentOpenAPI.framework'
@@ -32,17 +37,6 @@ s.resource = 'WDSocialSDK/SDK/Weibo3.2.0/WeiboSDK.bundle'
 # s.public_header_files = 'Classes/**/*.h'
 s.frameworks = 'Foundation', 'UIKit','Security','SystemConfiguration','CoreGraphics','CoreTelephony','QuartzCore','ImageIO','CoreText','CFNetwork'
 s.libraries = 'iconv', 'sqlite3','stdc++','z','c++'
-
-    s.subspec 'Wechat1.7.8' do |wx|
-        wx.source_files = 'WDSocialSDK/SDK/Wechat1.7.8'
-    end
-    s.subspec 'Weibo3.2.0' do |wb|
-        wb.source_files = 'WDSocialSDK/SDK/Weibo3.2.0'
-    end
-
-#   s.subspec 'Tencent3.2.3' do |tc|
-#     tc.source_files = 'WDSocialSDK/SDK/Tencent3.2.3/TencentOpenAPI.framework'
-#   end
 
 end
 

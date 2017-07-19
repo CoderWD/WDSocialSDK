@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6783B776323D88545A6FE63A /* Pods_WDSocialSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46670134F297372951927E3 /* Pods_WDSocialSDKExample.framework */; };
 		B6326C5C1F1DA84D0074EA46 /* WDSocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326C5A1F1DA84D0074EA46 /* WDSocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6326C641F1DA86D0074EA46 /* WDSocialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326C621F1DA86D0074EA46 /* WDSocialManager.h */; };
+		B6326C641F1DA86D0074EA46 /* WDSocialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326C621F1DA86D0074EA46 /* WDSocialManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6326C651F1DA86D0074EA46 /* WDSocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C631F1DA86D0074EA46 /* WDSocialManager.m */; };
 		B6326C711F1DA8C20074EA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C701F1DA8C20074EA46 /* main.m */; };
 		B6326C741F1DA8C20074EA46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C731F1DA8C20074EA46 /* AppDelegate.m */; };
@@ -28,15 +28,15 @@
 		B6326CB11F1DEE030074EA46 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6326CA31F1DEE030074EA46 /* TencentOpenAPI.framework */; };
 		B6326CB21F1DEE030074EA46 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6326CA51F1DEE030074EA46 /* libWeChatSDK.a */; };
 		B6326CB31F1DEE030074EA46 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6326CA61F1DEE030074EA46 /* README.txt */; };
-		B6326CB41F1DEE030074EA46 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CA71F1DEE030074EA46 /* WechatAuthSDK.h */; };
-		B6326CB51F1DEE030074EA46 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CA81F1DEE030074EA46 /* WXApi.h */; };
-		B6326CB61F1DEE030074EA46 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CA91F1DEE030074EA46 /* WXApiObject.h */; };
+		B6326CB41F1DEE030074EA46 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CA71F1DEE030074EA46 /* WechatAuthSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6326CB51F1DEE030074EA46 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CA81F1DEE030074EA46 /* WXApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6326CB61F1DEE030074EA46 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CA91F1DEE030074EA46 /* WXApiObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6326CB71F1DEE030074EA46 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6326CAB1F1DEE030074EA46 /* libWeiboSDK.a */; };
-		B6326CB81F1DEE030074EA46 /* WBHttpRequest+WeiboToken.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CAC1F1DEE030074EA46 /* WBHttpRequest+WeiboToken.h */; };
-		B6326CB91F1DEE030074EA46 /* WBHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CAD1F1DEE030074EA46 /* WBHttpRequest.h */; };
-		B6326CBA1F1DEE030074EA46 /* WeiboSDK+Statistics.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CAE1F1DEE030074EA46 /* WeiboSDK+Statistics.h */; };
+		B6326CB81F1DEE030074EA46 /* WBHttpRequest+WeiboToken.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CAC1F1DEE030074EA46 /* WBHttpRequest+WeiboToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6326CB91F1DEE030074EA46 /* WBHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CAD1F1DEE030074EA46 /* WBHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6326CBA1F1DEE030074EA46 /* WeiboSDK+Statistics.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CAE1F1DEE030074EA46 /* WeiboSDK+Statistics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6326CBB1F1DEE030074EA46 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B6326CAF1F1DEE030074EA46 /* WeiboSDK.bundle */; };
-		B6326CBC1F1DEE030074EA46 /* WeiboSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CB01F1DEE030074EA46 /* WeiboSDK.h */; };
+		B6326CBC1F1DEE030074EA46 /* WeiboSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326CB01F1DEE030074EA46 /* WeiboSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3B6C2DA1E4925CA75DCAAAC /* Pods_WDSocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC050CAEF7D9A248A7FF689 /* Pods_WDSocialSDK.framework */; };
 /* End PBXBuildFile section */
 

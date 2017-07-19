@@ -1,15 +1,13 @@
 PODS:
-  - WDSocialSDK (0.0.4):
-    - WDSocialSDK/Wechat1.7.8 (= 0.0.4)
-    - WDSocialSDK/Weibo3.2.0 (= 0.0.4)
-  - WDSocialSDK/Wechat1.7.8 (0.0.4)
-  - WDSocialSDK/Weibo3.2.0 (0.0.4)
+  - WDSocialSDK (0.0.5):
+    - WDSocialSDK/SDK (= 0.0.5)
+  - WDSocialSDK/SDK (0.0.5)
 
 DEPENDENCIES:
   - WDSocialSDK
 
 SPEC CHECKSUMS:
-  WDSocialSDK: 0d79a5317a109527aaae8619d456f09b7f667ea3
+  WDSocialSDK: 300c0f4dcf90c75cffae10064e9e1ef97d91f397
 
 PODFILE CHECKSUM: 133677711df31b94fd1fafd273dfa8843a1f10f2
 
