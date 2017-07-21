@@ -19,6 +19,8 @@ static WDSocialManager *socialManager = nil;
     
 }
 @property(nonatomic,copy) WDWechatCompleteBlock wechatCompleteBlock;
+@property(nonatomic,copy) WDTencentCompleteBlock tencentCompleteBlock;
+@property(nonatomic,copy) WDWeiboCompleteBlock weiboCompleteBlock;
 @property(nonatomic,strong) WDTencentDelegateImplement *tencentDelegateImplement;
 
 @end
@@ -76,14 +78,14 @@ static WDSocialManager *socialManager = nil;
     
 }
 
--(BOOL)handleOpenURL:(NSURL *)url delegate:(id<WeiboSDKDelegate>)delegate{
-    if ([WXApi handleOpenURL:url delegate:self]) {
++(BOOL)handleOpenURL:(NSURL *)url{
+    if ([WXApi handleOpenURL:url delegate:[WDSocialManager manager]]) {
         return YES;
-    }else if ([WeiboSDK handleOpenURL:url delegate:self]){
+    }else if ([WeiboSDK handleOpenURL:url delegate:[WDSocialManager manager]]){
         return YES;
     }else if([TencentOAuth HandleOpenURL:url]){
         return YES;
-    }else if([QQApiInterface handleOpenURL:url delegate:_tencentDelegateImplement]){
+    }else if([QQApiInterface handleOpenURL:url delegate:[WDSocialManager manager].tencentDelegateImplement]){
         return YES;
     }
     return NO;
@@ -112,6 +114,9 @@ static WDSocialManager *socialManager = nil;
     }else if ([response isKindOfClass:WBAuthorizeResponse.class]){//授权结果
         
     }
+    if (self.weiboCompleteBlock) {
+        self.weiboCompleteBlock(response);
+    }
 }
 
 
@@ -139,9 +144,43 @@ static WDSocialManager *socialManager = nil;
     }
 }
 
+
+
+
+
+
+/**
+ 分享信息到微信
+ 
+ @param messageReq <#messageReq description#>
+ @param block <#block description#>
+ */
 -(void)shareMessageToWechat:(BaseReq*)req completeBlock:(WDWechatCompleteBlock)block{
-    [WXApi sendReq:req];
     [self setWechatCompleteBlock:block];
+    [WXApi sendReq:req];
+}
+
+
+/**
+ 分享信息到微博
+ 
+ @param messageReq <#messageReq description#>
+ @param block <#block description#>
+ */
+-(void)shareMessageToWeibo:(WBBaseRequest*)messageReq completeBlock:(WDWeiboCompleteBlock)block{
+    [self setWeiboCompleteBlock:block];
+    [WeiboSDK sendRequest:messageReq];
+}
+
+/**
+ 分享信息到腾讯
+ 
+ @param messageReq <#messageReq description#>
+ @param block <#block description#>
+ */
+-(void)shareMessageToTencent:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block{
+    [self setTencentCompleteBlock:block];
+    [QQApiInterface sendReq:messageReq];
 }
 
 @end
@@ -161,7 +200,9 @@ static WDSocialManager *socialManager = nil;
  处理来至QQ的响应
  */
 - (void)onResp:(QQBaseResp *)resp{
-    
+    if (self.socialManager.tencentCompleteBlock) {
+        self.socialManager.tencentCompleteBlock(resp);
+    }
 }
 
 /**

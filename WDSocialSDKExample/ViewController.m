@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[WDSocialManager manager] shareMessageToWechat:nil completeBlock:^(BaseResp *resp) {
+        
+    }];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

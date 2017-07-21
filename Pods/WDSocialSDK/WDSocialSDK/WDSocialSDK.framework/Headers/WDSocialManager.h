@@ -19,39 +19,18 @@ typedef enum : NSUInteger {
 } WDPlatformType;
 
 typedef void(^WDWechatCompleteBlock)(BaseResp *resp);
-typedef void(^WDTencentCompleteBlock)(QQBaseResp *resp);
-typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
-
-
-
 
 @interface WDSocialManager : NSObject<WXApiDelegate,WeiboSDKDelegate>
 
 
 
 /**
- 分享信息到微信
+ 分享信息到分享
 
  @param messageReq <#messageReq description#>
  @param block <#block description#>
  */
 -(void)shareMessageToWechat:(BaseReq*)messageReq completeBlock:(WDWechatCompleteBlock)block;
-
-/**
- 分享信息到微博
- 
- @param messageReq <#messageReq description#>
- @param block <#block description#>
- */
--(void)shareMessageToWeibo:(WBBaseRequest*)messageReq completeBlock:(WDWeiboCompleteBlock)block;
-
-/**
- 分享信息到腾讯
- 
- @param messageReq <#messageReq description#>
- @param block <#block description#>
- */
--(void)shareMessageToTencent:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block;
 
 /**
  实例

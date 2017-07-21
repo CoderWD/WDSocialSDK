@@ -16,9 +16,6 @@ target "WDSocialSDKExample" do
     platform :ios, '8.0'
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
-    
-    pod 'WechatOpenSDK', '~> 1.7.8'
-    pod 'WDTencentSDK'
-    pod 'WDWeiboSDK'
+    pod 'WDSocialSDK'
 
 end
