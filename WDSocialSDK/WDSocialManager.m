@@ -78,6 +78,13 @@ static WDSocialManager *socialManager = nil;
     
 }
 
+
+/**
+ 处理通过URL启动App时传递的数据
+
+ @param url <#url description#>
+ @return <#return value description#>
+ */
 +(BOOL)handleOpenURL:(NSURL *)url{
     if ([WXApi handleOpenURL:url delegate:[WDSocialManager manager]]) {
         return YES;

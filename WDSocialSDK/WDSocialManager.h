@@ -28,6 +28,13 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
 @interface WDSocialManager : NSObject<WXApiDelegate,WeiboSDKDelegate>
 
 
+/**
+ 处理通过URL启动App时传递的数据
+ 
+ @param url <#url description#>
+ @return <#return value description#>
+ */
++(BOOL)handleOpenURL:(NSURL *)url;
 
 /**
  分享信息到微信
