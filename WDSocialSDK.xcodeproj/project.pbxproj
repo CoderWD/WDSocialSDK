@@ -18,6 +18,7 @@
 		B6326C7A1F1DA8C20074EA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6326C781F1DA8C20074EA46 /* Main.storyboard */; };
 		B6326C7C1F1DA8C20074EA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6326C7B1F1DA8C20074EA46 /* Assets.xcassets */; };
 		B6326C7F1F1DA8C20074EA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6326C7D1F1DA8C20074EA46 /* LaunchScreen.storyboard */; };
+		B639788C1F21C968004A3F2C /* WDSocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B639788B1F21C968004A3F2C /* WDSocialSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B63978661F219AE4004A3F2C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B63978681F219AEB004A3F2C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B639786A1F219B0D004A3F2C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B639788B1F21C968004A3F2C /* WDSocialSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WDSocialSDK.framework; sourceTree = "<group>"; };
 		E46670134F297372951927E3 /* Pods_WDSocialSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDSocialSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6783B776323D88545A6FE63A /* Pods_WDSocialSDKExample.framework in Frameworks */,
+				B639788C1F21C968004A3F2C /* WDSocialSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +136,7 @@
 		B6326C6E1F1DA8C20074EA46 /* WDSocialSDKExample */ = {
 			isa = PBXGroup;
 			children = (
+				B639788B1F21C968004A3F2C /* WDSocialSDK.framework */,
 				B6326C721F1DA8C20074EA46 /* AppDelegate.h */,
 				B6326C731F1DA8C20074EA46 /* AppDelegate.m */,
 				B6326C751F1DA8C20074EA46 /* ViewController.h */,
@@ -542,6 +546,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WDSocialSDK/TencentOpenAPI",
 					"$(PROJECT_DIR)/WDSocialSDK/SDK/Tencent3.2.3",
+					"$(PROJECT_DIR)/WDSocialSDK",
 				);
 				INFOPLIST_FILE = WDSocialSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -573,6 +578,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WDSocialSDK/TencentOpenAPI",
 					"$(PROJECT_DIR)/WDSocialSDK/SDK/Tencent3.2.3",
+					"$(PROJECT_DIR)/WDSocialSDK",
 				);
 				INFOPLIST_FILE = WDSocialSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -595,6 +601,10 @@
 			baseConfigurationReference = 5EDEAF64074E0785D98E3025 /* Pods-WDSocialSDKExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WDSocialSDKExample",
+				);
 				INFOPLIST_FILE = WDSocialSDKExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.coderhe.WDSocialSDKExample;
@@ -607,6 +617,10 @@
 			baseConfigurationReference = 0D218CD2F61E68EAC253FC86 /* Pods-WDSocialSDKExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WDSocialSDKExample",
+				);
 				INFOPLIST_FILE = WDSocialSDKExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.coderhe.WDSocialSDKExample;

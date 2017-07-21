@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "WDSocialSDK"
-s.version          = "0.0.8"
+s.version          = "0.0.1"
 s.summary          = "Wechat,QQ,Webo Social share and authorization"
 s.description      = <<-DESC
 It is a Social SDK use on ios by Objective-c.
@@ -18,21 +18,12 @@ s.requires_arc = true
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
 s.source_files = 'WDSocialSDK/*.{h,m}'
+s.ios.vendored_frameworks = 'WDSocialSDK/WDSocialSDK.framework'
+s.frameworks = 'Foundation', 'UIKit'
 
-s.subspec 'Wechat' do |wx|
-    wx.source_files = 'WDSocialSDK/SDK/Wechat1.7.8/*.*'
-end
-
-s.subspec 'Weibo' do |wx|
-    wb.source_files = 'WDSocialSDK/SDK/Weibo3.2.0/*.*'
-end
-
-s.ios.vendored_frameworks = 'WDSocialSDK/SDK/Tencent3.2.3/TencentOpenAPI.framework','WDSocialSDK/WDSocialSDK.framework'
-s.vendored_libraries = 'WDSocialSDK/SDK/Wechat1.7.8/libWeChatSDK.a', 'WDSocialSDK/SDK/Weibo3.2.0/libWeiboSDK.a'
-s.resource = 'WDSocialSDK/SDK/Weibo3.2.0/WeiboSDK.bundle'
-
-s.frameworks = 'Foundation', 'UIKit','Security','SystemConfiguration','CoreGraphics','CoreTelephony','QuartzCore','ImageIO','CoreText','CFNetwork'
-s.libraries = 'iconv', 'sqlite3','stdc++','z','c++'
+s.dependency 'WechatOpenSDK', '~> 1.7.8'
+s.dependency 'WDTencentSDK'
+s.dependency 'WDWeiboSDK'
 
 end
 

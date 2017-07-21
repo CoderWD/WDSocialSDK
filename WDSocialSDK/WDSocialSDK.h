@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WDSocialManager.h"
 
 //! Project version number for WDSocialSDK.
 FOUNDATION_EXPORT double WDSocialSDKVersionNumber;

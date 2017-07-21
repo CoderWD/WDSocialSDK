@@ -18,12 +18,19 @@ static WDSocialManager *socialManager = nil;
 @interface WDSocialManager(){
     
 }
+@property(nonatomic,copy) WDWechatCompleteBlock wechatCompleteBlock;
 @property(nonatomic,strong) WDTencentDelegateImplement *tencentDelegateImplement;
 
 @end
 @implementation WDSocialManager
 
-+(WDSocialManager*)shareInstance{
+
+/**
+ 实例
+
+ @return <#return value description#>
+ */
++(WDSocialManager*)manager{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         socialManager = [[WDSocialManager alloc] init];
@@ -108,6 +115,7 @@ static WDSocialManager *socialManager = nil;
 }
 
 
+
 /*! @brief 收到一个来自微信的请求，第三方应用程序处理完后调用sendResp向微信发送结果
  *
  * 收到一个来自微信的请求，异步处理完成后必须调用sendResp发送处理结果给微信。
@@ -126,9 +134,15 @@ static WDSocialManager *socialManager = nil;
  * @param resp 具体的回应内容，是自动释放的
  */
 -(void) onResp:(BaseResp*)resp{
-    
+    if (self.wechatCompleteBlock) {
+        self.wechatCompleteBlock(resp);
+    }
 }
 
+-(void)shareMessageToWechat:(BaseReq*)req completeBlock:(WDWechatCompleteBlock)block{
+    [WXApi sendReq:req];
+    [self setWechatCompleteBlock:block];
+}
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WDSocialSDK/WDSocialSDK.h>
 
 @interface ViewController : UIViewController
 
