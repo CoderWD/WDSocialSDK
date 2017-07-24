@@ -13,8 +13,11 @@ static NSString *tencentAppKey = nil;
 static NSString *weiboAppKey = nil;
 static NSString *wechatAppKey = nil;
 
-static WDSocialManager *socialManager = nil;
 
+typedef void(^WDTencentDidLoginBlock)(TencentOAuth *tencentOAuth);
+typedef void(^WDCommonNOParamBlock)();
+
+static WDSocialManager *socialManager = nil;
 @interface WDSocialManager()<TencentSessionDelegate>{
     
 }
@@ -23,9 +26,17 @@ static WDSocialManager *socialManager = nil;
 @property(nonatomic,copy) WDWeiboCompleteBlock weiboCompleteBlock;
 @property(nonatomic,strong) WDTencentDelegateImplement *tencentDelegateImplement;
 
+@property(nonatomic,copy) WDTencentDidLoginBlock tencentDidLoginBlock;
+@property(nonatomic,copy) WDCommonNOParamBlock tencentdidNotLoginBlock;
+@property(nonatomic,copy) WDCommonNOParamBlock tencentdidNotNetWorkBlock;
+
+
 @property(nonatomic,strong) TencentOAuth *tencentOAuth;
 
 @end
+
+
+
 @implementation WDSocialManager
 
 
@@ -125,6 +136,7 @@ static WDSocialManager *socialManager = nil;
     }
     if (self.weiboCompleteBlock) {
         self.weiboCompleteBlock(response);
+        self.weiboCompleteBlock = nil;
     }
 }
 
@@ -150,6 +162,7 @@ static WDSocialManager *socialManager = nil;
 -(void) onResp:(BaseResp*)resp{
     if (self.wechatCompleteBlock) {
         self.wechatCompleteBlock(resp);
+        self.wechatCompleteBlock = nil;
     }
 }
 
@@ -192,30 +205,49 @@ static WDSocialManager *socialManager = nil;
     [QQApiInterface sendReq:messageReq];
 }
 
-
-
 /**
  腾讯登录授权
 
- @param req <#req description#>
- @param viewController <#viewController description#>
+ @param permissions <#permissions description#>
  @param didLogin 登录成功后的回调
  @param didNotLogin 登录失败后的回调
  @param didNotNetWork 登录时网络有问题的回调
  */
--(void)tencentAuthReq:(SendAuthReq*)req
-       viewController:(UIViewController*)viewController
+-(void)tencentAuthPermissions:(NSArray*)permissions
              didLogin:(void(^)(TencentOAuth *auth))didLogin
           didNotLogin:(void(^)())didNotLogin
         didNotNetWork:(void(^)())didNotNetWork{
+    [self setTencentDidLoginBlock:didLogin];
+    [self setTencentdidNotLoginBlock:didNotLogin];
+    [self setTencentdidNotNetWorkBlock:didNotNetWork];
+    [self.tencentOAuth authorize:permissions inSafari:![QQApiInterface isQQInstalled]];
     
 }
+
+
+/**
+ 微信登录授权
+
+ @param req <#req description#>
+ @param viewController <#viewController description#>
+ @param finishBlock <#finishBlock description#>
+ */
+-(void)wechatAuthReq:(SendAuthReq*)req
+      viewController:(UIViewController*)viewController
+         finishBlock:(void(^)())finishBlock{
+    [self setWechatCompleteBlock:finishBlock];
+    [WXApi sendAuthReq:req viewController:viewController delegate:self];
+}
+
 
 /**
  * 登录成功后的回调
  */
 - (void)tencentDidLogin{
-    
+    if (self.tencentDidLoginBlock) {
+        self.tencentDidLoginBlock(self.tencentOAuth);
+        self.tencentDidLoginBlock = nil;
+    }
 }
 
 /**
@@ -223,14 +255,20 @@ static WDSocialManager *socialManager = nil;
  * \param cancelled 代表用户是否主动退出登录
  */
 - (void)tencentDidNotLogin:(BOOL)cancelled{
-    
+    if (self.tencentdidNotLoginBlock) {
+        self.tencentdidNotLoginBlock();
+        self.tencentdidNotLoginBlock = nil;
+    }
 }
 
 /**
  * 登录时网络有问题的回调
  */
 - (void)tencentDidNotNetWork{
-    
+    if (self.tencentdidNotNetWorkBlock) {
+        self.tencentdidNotNetWorkBlock();
+        self.tencentdidNotNetWorkBlock = nil;
+    }
 }
 
 

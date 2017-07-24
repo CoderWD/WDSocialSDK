@@ -70,17 +70,26 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
 /**
  腾讯登录授权
  
- @param req <#req description#>
- @param viewController <#viewController description#>
+ @param permissions <#permissions description#>
  @param didLogin 登录成功后的回调
  @param didNotLogin 登录失败后的回调
  @param didNotNetWork 登录时网络有问题的回调
  */
--(void)tencentAuthReq:(SendAuthReq*)req
-       viewController:(UIViewController*)viewController
-             didLogin:(void(^)(TencentOAuth *auth))didLogin
-          didNotLogin:(void(^)())didNotLogin
-        didNotNetWork:(void(^)())didNotNetWork;
+-(void)tencentAuthPermissions:(NSArray*)permissions
+                     didLogin:(void(^)(TencentOAuth *auth))didLogin
+                  didNotLogin:(void(^)())didNotLogin
+                didNotNetWork:(void(^)())didNotNetWork;
+
+/**
+ 微信登录授权
+ 
+ @param req <#req description#>
+ @param viewController <#viewController description#>
+ @param finishBlock <#finishBlock description#>
+ */
+-(void)wechatAuthReq:(SendAuthReq*)req
+      viewController:(UIViewController*)viewController
+         finishBlock:(void(^)())finishBlock;
 
 
 @end

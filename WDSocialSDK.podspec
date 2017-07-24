@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "WDSocialSDK"
-s.version          = "0.0.3"
+s.version          = "0.0.4"
 s.summary          = "Wechat,QQ,Webo Social share and authorization"
 s.description      = <<-DESC
 It is a Social SDK use on ios by Objective-c.
