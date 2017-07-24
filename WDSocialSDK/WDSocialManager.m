@@ -224,7 +224,6 @@ static WDSocialManager *socialManager = nil;
     
 }
 
-
 /**
  微信登录授权
 

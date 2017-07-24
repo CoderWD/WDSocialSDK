@@ -80,6 +80,7 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
                   didNotLogin:(void(^)())didNotLogin
                 didNotNetWork:(void(^)())didNotNetWork;
 
+
 /**
  微信登录授权
  
@@ -89,7 +90,7 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
  */
 -(void)wechatAuthReq:(SendAuthReq*)req
       viewController:(UIViewController*)viewController
-         finishBlock:(void(^)())finishBlock;
+         finishBlock:(void(^)(BaseResp *resp))finishBlock;
 
 
 @end
