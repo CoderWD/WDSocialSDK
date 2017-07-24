@@ -14,9 +14,20 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad model{
     [super viewDidLoad];
-    [[WDSocialManager manager] shareMessageToWechat:nil completeBlock:^(BaseResp *resp) {
+    
+    [[WDSocialManager manager] shareMessageToWechat:req completeBlock:^(BaseResp *resp) {
+        
+    }];
+
+    
+    
+    [[WDSocialManager manager] tencentAuthReq:req viewController:self didLogin:^(TencentOAuth *auth) {
+        
+    } didNotLogin:^{
+        
+    } didNotNetWork:^{
         
     }];
     

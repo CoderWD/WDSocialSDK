@@ -27,7 +27,20 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
 
 @interface WDSocialManager : NSObject<WXApiDelegate,WeiboSDKDelegate>
 
+/**
+ 实例
+ 
+ @return <#return value description#>
+ */
++(WDSocialManager*)manager;
 
+/**
+ 处理通过URL启动App时传递的数据
+ 
+ @param url <#url description#>
+ @return <#return value description#>
+ */
++(BOOL)handleOpenURL:(NSURL *)url;
 
 /**
  分享信息到微信
@@ -53,12 +66,22 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
  */
 -(void)shareMessageToTencent:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block;
 
+
 /**
- 实例
+ 腾讯登录授权
  
- @return <#return value description#>
+ @param req <#req description#>
+ @param viewController <#viewController description#>
+ @param didLogin 登录成功后的回调
+ @param didNotLogin 登录失败后的回调
+ @param didNotNetWork 登录时网络有问题的回调
  */
-+(WDSocialManager*)manager;
+-(void)tencentAuthReq:(SendAuthReq*)req
+       viewController:(UIViewController*)viewController
+             didLogin:(void(^)(TencentOAuth *auth))didLogin
+          didNotLogin:(void(^)())didNotLogin
+        didNotNetWork:(void(^)())didNotNetWork;
+
 
 @end
 

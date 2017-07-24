@@ -7,7 +7,7 @@
 //
 
 #import "WDSocialManager.h"
-
+#import <TencentOpenAPI/TencentOAuth.h>
 
 static NSString *tencentAppKey = nil;
 static NSString *weiboAppKey = nil;
@@ -15,13 +15,15 @@ static NSString *wechatAppKey = nil;
 
 static WDSocialManager *socialManager = nil;
 
-@interface WDSocialManager(){
+@interface WDSocialManager()<TencentSessionDelegate>{
     
 }
 @property(nonatomic,copy) WDWechatCompleteBlock wechatCompleteBlock;
 @property(nonatomic,copy) WDTencentCompleteBlock tencentCompleteBlock;
 @property(nonatomic,copy) WDWeiboCompleteBlock weiboCompleteBlock;
 @property(nonatomic,strong) WDTencentDelegateImplement *tencentDelegateImplement;
+
+@property(nonatomic,strong) TencentOAuth *tencentOAuth;
 
 @end
 @implementation WDSocialManager
@@ -55,7 +57,7 @@ static WDSocialManager *socialManager = nil;
  @param redirectURL <#redirectURL description#>
  */
 +(void)setTencentAppKey:(NSString*)appKey redirectURL:(NSString*)redirectURL{
-    
+    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:self];
 }
 
 /**
@@ -75,7 +77,7 @@ static WDSocialManager *socialManager = nil;
  @param redirectURL <#redirectURL description#>
  */
 +(void)setWeChatAppKey:(NSString*)appKey redirectURL:(NSString*)redirectURL{
-    
+    [WXApi registerApp:appKey];
 }
 
 
@@ -190,8 +192,49 @@ static WDSocialManager *socialManager = nil;
     [QQApiInterface sendReq:messageReq];
 }
 
-@end
 
+
+/**
+ 腾讯登录授权
+
+ @param req <#req description#>
+ @param viewController <#viewController description#>
+ @param didLogin 登录成功后的回调
+ @param didNotLogin 登录失败后的回调
+ @param didNotNetWork 登录时网络有问题的回调
+ */
+-(void)tencentAuthReq:(SendAuthReq*)req
+       viewController:(UIViewController*)viewController
+             didLogin:(void(^)(TencentOAuth *auth))didLogin
+          didNotLogin:(void(^)())didNotLogin
+        didNotNetWork:(void(^)())didNotNetWork{
+    
+}
+
+/**
+ * 登录成功后的回调
+ */
+- (void)tencentDidLogin{
+    
+}
+
+/**
+ * 登录失败后的回调
+ * \param cancelled 代表用户是否主动退出登录
+ */
+- (void)tencentDidNotLogin:(BOOL)cancelled{
+    
+}
+
+/**
+ * 登录时网络有问题的回调
+ */
+- (void)tencentDidNotNetWork{
+    
+}
+
+
+@end
 
 
 @implementation WDTencentDelegateImplement
