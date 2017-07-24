@@ -20,16 +20,25 @@
     [[WDSocialManager manager] shareMessageToWechat:nil completeBlock:^(BaseResp *resp) {
         
     }];
-
+//
+//    NSArray *permissions =  [NSArray arrayWithObjects:@"get_user_info", @"get_simple_userinfo", @"add_t", nil];
+//    [[WDSocialManager manager] tencentAuthPermissions:permissions didLogin:^(TencentOAuth *auth) {
+//        
+//    } didNotLogin:^{
+//        
+//    } didNotNetWork:^{
+//        
+//    }];
+//    
+//    //构造SendAuthReq结构体
+//    SendAuthReq* req =[[SendAuthReq alloc ] init ];
+//    req.scope = @"snsapi_userinfo" ;
+//    req.state = @"zylotte_weix_login";
+//    [[WDSocialManager manager] wechatAuthReq:req viewController:self finishBlock:^{
+//        
+//    }];
     
     
-    [[WDSocialManager manager] tencentAuthReq:nil viewController:self didLogin:^(TencentOAuth *auth) {
-        
-    } didNotLogin:^{
-        
-    } didNotNetWork:^{
-        
-    }];
     
     // Do any additional setup after loading the view, typically from a nib.
 }

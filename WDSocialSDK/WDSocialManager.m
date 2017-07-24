@@ -234,7 +234,7 @@ static WDSocialManager *socialManager = nil;
  */
 -(void)wechatAuthReq:(SendAuthReq*)req
       viewController:(UIViewController*)viewController
-         finishBlock:(void(^)())finishBlock{
+         finishBlock:(void(^)(BaseResp *resp))finishBlock{
     [self setWechatCompleteBlock:finishBlock];
     [WXApi sendAuthReq:req viewController:viewController delegate:self];
 }
