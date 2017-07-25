@@ -1,5 +1,5 @@
 PODS:
-  - WDSocialSDK (0.0.5):
+  - WDSocialSDK (0.0.6):
     - WDTencentSDK
     - WDWeiboSDK
     - WechatOpenSDK (~> 1.7.8)
@@ -14,7 +14,7 @@ DEPENDENCIES:
   - WechatOpenSDK (~> 1.7.8)
 
 SPEC CHECKSUMS:
-  WDSocialSDK: 2590375ef54fa522aff1819b1adcc44c8a0c587b
+  WDSocialSDK: 088f20bd56db260fb66105bba038009192724fdc
   WDTencentSDK: cc6b4031a8d34e04f00d55ae1ffaa73dc2689d75
   WDWeiboSDK: 6af0088b8e28529963df155b1624cc78782d977b
   WechatOpenSDK: ad1e7be1b66416df847ac50830c798b70c9e365e

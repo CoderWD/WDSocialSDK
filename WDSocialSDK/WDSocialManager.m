@@ -9,10 +9,6 @@
 #import "WDSocialManager.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 
-static NSString *tencentAppKey = nil;
-static NSString *weiboAppKey = nil;
-static NSString *wechatAppKey = nil;
-
 
 typedef void(^WDTencentDidLoginBlock)(TencentOAuth *tencentOAuth);
 typedef void(^WDCommonNOParamBlock)();

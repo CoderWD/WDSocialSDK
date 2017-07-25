@@ -21,6 +21,7 @@
         
     }];
 
+    //QQ登录
     NSArray *permissions =  [NSArray arrayWithObjects:@"get_user_info", @"get_simple_userinfo", @"add_t", nil];
     [[WDSocialManager manager] tencentAuthPermissions:permissions didLogin:^(TencentOAuth *auth) {
         
@@ -30,11 +31,12 @@
         
     }];
     
-    //构造SendAuthReq结构体
+    
+    //微信登录
     SendAuthReq* req =[[SendAuthReq alloc ] init ];
     req.scope = @"snsapi_userinfo" ;
-    req.state = @"zylotte_weix_login";
-    [[WDSocialManager manager] wechatAuthReq:req viewController:self finishBlock:^{
+    req.state = @"weix_login";
+    [[WDSocialManager manager] wechatAuthReq:req viewController:self finishBlock:^(BaseResp *resp) {
         
     }];
     
