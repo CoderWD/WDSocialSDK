@@ -34,6 +34,28 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
  */
 +(WDSocialManager*)manager;
 
+
+/**
+ 初始化QQ
+ 
+ @param appKey <#appKey description#>
+ */
++(void)setTencentAppKey:(NSString*)appKey;
+
+/**
+ 初始化微博
+ 
+ @param appKey <#appKey description#>
+ */
++(void)setWeiboAppKey:(NSString*)appKey;
+/**
+ 初始化微信
+ 
+ @param appKey <#appKey description#>
+ */
++(void)setWeChatAppKey:(NSString*)appKey;
+    
+
 /**
  处理通过URL启动App时传递的数据
  

@@ -7,7 +7,6 @@
 //
 
 #import "WDSocialManager.h"
-#import <TencentOpenAPI/TencentOAuth.h>
 
 
 typedef void(^WDTencentDidLoginBlock)(TencentOAuth *tencentOAuth);
@@ -62,19 +61,17 @@ static WDSocialManager *socialManager = nil;
  初始化QQ
  
  @param appKey <#appKey description#>
- @param redirectURL <#redirectURL description#>
  */
-+(void)setTencentAppKey:(NSString*)appKey redirectURL:(NSString*)redirectURL{
-    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:self];
++(void)setTencentAppKey:(NSString*)appKey{
+    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:[WDSocialManager manager]];
 }
 
 /**
  初始化微博
  
  @param appKey <#appKey description#>
- @param redirectURL <#redirectURL description#>
  */
-+(void)setWeiboAppKey:(NSString*)appKey redirectURL:(NSString*)redirectURL{
++(void)setWeiboAppKey:(NSString*)appKey{
     [WeiboSDK registerApp:appKey];
 }
 
@@ -82,9 +79,8 @@ static WDSocialManager *socialManager = nil;
  初始化微信
  
  @param appKey <#appKey description#>
- @param redirectURL <#redirectURL description#>
  */
-+(void)setWeChatAppKey:(NSString*)appKey redirectURL:(NSString*)redirectURL{
++(void)setWeChatAppKey:(NSString*)appKey{
     [WXApi registerApp:appKey];
 }
 
