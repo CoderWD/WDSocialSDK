@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007CAA51DA206B9A9BA03FA3 /* Pods_WDSocialSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46670134F297372951927E3 /* Pods_WDSocialSDKExample.framework */; };
 		1F22E1A8A19A041F5FC43F2B /* Pods_WDSocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC050CAEF7D9A248A7FF689 /* Pods_WDSocialSDK.framework */; };
-		6783B776323D88545A6FE63A /* Pods_WDSocialSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46670134F297372951927E3 /* Pods_WDSocialSDKExample.framework */; };
 		B6326C5C1F1DA84D0074EA46 /* WDSocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326C5A1F1DA84D0074EA46 /* WDSocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6326C641F1DA86D0074EA46 /* WDSocialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B6326C621F1DA86D0074EA46 /* WDSocialManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6326C651F1DA86D0074EA46 /* WDSocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C631F1DA86D0074EA46 /* WDSocialManager.m */; };
-		B6326C711F1DA8C20074EA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C701F1DA8C20074EA46 /* main.m */; };
-		B6326C741F1DA8C20074EA46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C731F1DA8C20074EA46 /* AppDelegate.m */; };
-		B6326C771F1DA8C20074EA46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6326C761F1DA8C20074EA46 /* ViewController.m */; };
-		B6326C7A1F1DA8C20074EA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6326C781F1DA8C20074EA46 /* Main.storyboard */; };
-		B6326C7C1F1DA8C20074EA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6326C7B1F1DA8C20074EA46 /* Assets.xcassets */; };
-		B6326C7F1F1DA8C20074EA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6326C7D1F1DA8C20074EA46 /* LaunchScreen.storyboard */; };
+		B69442901F2723C20091FFC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B694428F1F2723C20091FFC5 /* main.m */; };
+		B69442931F2723C20091FFC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B69442921F2723C20091FFC5 /* AppDelegate.m */; };
+		B69442961F2723C20091FFC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69442951F2723C20091FFC5 /* ViewController.m */; };
+		B69442991F2723C20091FFC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69442971F2723C20091FFC5 /* Main.storyboard */; };
+		B694429B1F2723C20091FFC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B694429A1F2723C20091FFC5 /* Assets.xcassets */; };
+		B694429E1F2723C20091FFC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B694429C1F2723C20091FFC5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,16 +31,6 @@
 		B6326C5B1F1DA84D0074EA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6326C621F1DA86D0074EA46 /* WDSocialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSocialManager.h; sourceTree = "<group>"; };
 		B6326C631F1DA86D0074EA46 /* WDSocialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSocialManager.m; sourceTree = "<group>"; };
-		B6326C6D1F1DA8C20074EA46 /* WDSocialSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDSocialSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6326C701F1DA8C20074EA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B6326C721F1DA8C20074EA46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B6326C731F1DA8C20074EA46 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B6326C751F1DA8C20074EA46 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B6326C761F1DA8C20074EA46 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B6326C791F1DA8C20074EA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B6326C7B1F1DA8C20074EA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B6326C7E1F1DA8C20074EA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B6326C801F1DA8C20074EA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6326C841F1DBBDE0074EA46 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B6326C861F1DBBEC0074EA46 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		B6326C881F1DBBF30074EA46 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -54,6 +44,16 @@
 		B63978661F219AE4004A3F2C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B63978681F219AEB004A3F2C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B639786A1F219B0D004A3F2C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B694428C1F2723C20091FFC5 /* WDSocialSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDSocialSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B694428F1F2723C20091FFC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B69442911F2723C20091FFC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B69442921F2723C20091FFC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B69442941F2723C20091FFC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B69442951F2723C20091FFC5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B69442981F2723C20091FFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B694429A1F2723C20091FFC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B694429D1F2723C20091FFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B694429F1F2723C20091FFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E46670134F297372951927E3 /* Pods_WDSocialSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDSocialSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,11 +66,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6326C6A1F1DA8C20074EA46 /* Frameworks */ = {
+		B69442891F2723C20091FFC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6783B776323D88545A6FE63A /* Pods_WDSocialSDKExample.framework in Frameworks */,
+				007CAA51DA206B9A9BA03FA3 /* Pods_WDSocialSDKExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B6326C591F1DA84D0074EA46 /* WDSocialSDK */,
-				B6326C6E1F1DA8C20074EA46 /* WDSocialSDKExample */,
+				B694428D1F2723C20091FFC5 /* WDSocialSDKExample */,
 				B6326C581F1DA84D0074EA46 /* Products */,
 				E2D0BB66D548732D629F8B41 /* Pods */,
 				4B7752D1533D137E9E01C997 /* Frameworks */,
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B6326C571F1DA84D0074EA46 /* WDSocialSDK.framework */,
-				B6326C6D1F1DA8C20074EA46 /* WDSocialSDKExample.app */,
+				B694428C1F2723C20091FFC5 /* WDSocialSDKExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,26 +130,26 @@
 			path = WDSocialSDK;
 			sourceTree = "<group>";
 		};
-		B6326C6E1F1DA8C20074EA46 /* WDSocialSDKExample */ = {
+		B694428D1F2723C20091FFC5 /* WDSocialSDKExample */ = {
 			isa = PBXGroup;
 			children = (
-				B6326C721F1DA8C20074EA46 /* AppDelegate.h */,
-				B6326C731F1DA8C20074EA46 /* AppDelegate.m */,
-				B6326C751F1DA8C20074EA46 /* ViewController.h */,
-				B6326C761F1DA8C20074EA46 /* ViewController.m */,
-				B6326C781F1DA8C20074EA46 /* Main.storyboard */,
-				B6326C7B1F1DA8C20074EA46 /* Assets.xcassets */,
-				B6326C7D1F1DA8C20074EA46 /* LaunchScreen.storyboard */,
-				B6326C801F1DA8C20074EA46 /* Info.plist */,
-				B6326C6F1F1DA8C20074EA46 /* Supporting Files */,
+				B69442911F2723C20091FFC5 /* AppDelegate.h */,
+				B69442921F2723C20091FFC5 /* AppDelegate.m */,
+				B69442941F2723C20091FFC5 /* ViewController.h */,
+				B69442951F2723C20091FFC5 /* ViewController.m */,
+				B69442971F2723C20091FFC5 /* Main.storyboard */,
+				B694429A1F2723C20091FFC5 /* Assets.xcassets */,
+				B694429C1F2723C20091FFC5 /* LaunchScreen.storyboard */,
+				B694429F1F2723C20091FFC5 /* Info.plist */,
+				B694428E1F2723C20091FFC5 /* Supporting Files */,
 			);
 			path = WDSocialSDKExample;
 			sourceTree = "<group>";
 		};
-		B6326C6F1F1DA8C20074EA46 /* Supporting Files */ = {
+		B694428E1F2723C20091FFC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B6326C701F1DA8C20074EA46 /* main.m */,
+				B694428F1F2723C20091FFC5 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,13 +184,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6326C5F1F1DA84D0074EA46 /* Build configuration list for PBXNativeTarget "WDSocialSDK" */;
 			buildPhases = (
-				92E348AE490928FD41204888 /* [CP] Check Pods Manifest.lock */,
+				C902D121838148C671F8B810 /* [CP] Check Pods Manifest.lock */,
 				B6326C521F1DA84D0074EA46 /* Sources */,
 				B6326C531F1DA84D0074EA46 /* Frameworks */,
 				B6326C541F1DA84D0074EA46 /* Headers */,
 				B6326C551F1DA84D0074EA46 /* Resources */,
-				8108A7CF35EAEDF4875BA189 /* [CP] Copy Pods Resources */,
 				B6A8E84C1F1F379600B40DAB /* ShellScript */,
+				32CE34A914B8C071A6AB43FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,16 +201,16 @@
 			productReference = B6326C571F1DA84D0074EA46 /* WDSocialSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B6326C6C1F1DA8C20074EA46 /* WDSocialSDKExample */ = {
+		B694428B1F2723C20091FFC5 /* WDSocialSDKExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6326C811F1DA8C20074EA46 /* Build configuration list for PBXNativeTarget "WDSocialSDKExample" */;
+			buildConfigurationList = B69442A01F2723C20091FFC5 /* Build configuration list for PBXNativeTarget "WDSocialSDKExample" */;
 			buildPhases = (
-				54534D221D888D8D15D75193 /* [CP] Check Pods Manifest.lock */,
-				B6326C691F1DA8C20074EA46 /* Sources */,
-				B6326C6A1F1DA8C20074EA46 /* Frameworks */,
-				B6326C6B1F1DA8C20074EA46 /* Resources */,
-				ADB43E30EE77A1CEAFA2CDDF /* [CP] Embed Pods Frameworks */,
-				62B77D86F4433CA1304A0A5B /* [CP] Copy Pods Resources */,
+				B658F240459BFBEDCBFBF263 /* [CP] Check Pods Manifest.lock */,
+				B69442881F2723C20091FFC5 /* Sources */,
+				B69442891F2723C20091FFC5 /* Frameworks */,
+				B694428A1F2723C20091FFC5 /* Resources */,
+				0CA78A9401229772FA9CD7A6 /* [CP] Embed Pods Frameworks */,
+				CFBD1DA75880B5548CE3EFAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,7 +218,7 @@
 			);
 			name = WDSocialSDKExample;
 			productName = WDSocialSDKExample;
-			productReference = B6326C6D1F1DA8C20074EA46 /* WDSocialSDKExample.app */;
+			productReference = B694428C1F2723C20091FFC5 /* WDSocialSDKExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -234,7 +234,7 @@
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
-					B6326C6C1F1DA8C20074EA46 = {
+					B694428B1F2723C20091FFC5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
@@ -254,7 +254,7 @@
 			projectRoot = "";
 			targets = (
 				B6326C561F1DA84D0074EA46 /* WDSocialSDK */,
-				B6326C6C1F1DA8C20074EA46 /* WDSocialSDKExample */,
+				B694428B1F2723C20091FFC5 /* WDSocialSDKExample */,
 			);
 		};
 /* End PBXProject section */
@@ -267,56 +267,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6326C6B1F1DA8C20074EA46 /* Resources */ = {
+		B694428A1F2723C20091FFC5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6326C7F1F1DA8C20074EA46 /* LaunchScreen.storyboard in Resources */,
-				B6326C7C1F1DA8C20074EA46 /* Assets.xcassets in Resources */,
-				B6326C7A1F1DA8C20074EA46 /* Main.storyboard in Resources */,
+				B694429E1F2723C20091FFC5 /* LaunchScreen.storyboard in Resources */,
+				B694429B1F2723C20091FFC5 /* Assets.xcassets in Resources */,
+				B69442991F2723C20091FFC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54534D221D888D8D15D75193 /* [CP] Check Pods Manifest.lock */ = {
+		0CA78A9401229772FA9CD7A6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WDSocialSDKExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		62B77D86F4433CA1304A0A5B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-resources.sh",
-				"${PODS_ROOT}/WDWeiboSDK/WeiboSDK.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8108A7CF35EAEDF4875BA189 /* [CP] Copy Pods Resources */ = {
+		32CE34A914B8C071A6AB43FB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,7 +313,38 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDK/Pods-WDSocialSDK-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92E348AE490928FD41204888 /* [CP] Check Pods Manifest.lock */ = {
+		B658F240459BFBEDCBFBF263 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WDSocialSDKExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6A8E84C1F1F379600B40DAB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${ACTION}\" = \"build\" ]\nthen\nINSTALL_DIR=${SRCROOT}/WDSocialSDK/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n#open \"${SRCROOT}/Products\"\nfi";
+		};
+		C902D121838148C671F8B810 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,36 +362,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADB43E30EE77A1CEAFA2CDDF /* [CP] Embed Pods Frameworks */ = {
+		CFBD1DA75880B5548CE3EFAE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WDSocialSDK/WDSocialSDK.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-resources.sh",
+				"${PODS_ROOT}/WDWeiboSDK/WeiboSDK.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WDSocialSDK.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDSocialSDKExample/Pods-WDSocialSDKExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		B6A8E84C1F1F379600B40DAB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${ACTION}\" = \"build\" ]\nthen\nINSTALL_DIR=${SRCROOT}/WDSocialSDK/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n#open \"${SRCROOT}/Products\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -394,31 +391,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6326C691F1DA8C20074EA46 /* Sources */ = {
+		B69442881F2723C20091FFC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6326C771F1DA8C20074EA46 /* ViewController.m in Sources */,
-				B6326C741F1DA8C20074EA46 /* AppDelegate.m in Sources */,
-				B6326C711F1DA8C20074EA46 /* main.m in Sources */,
+				B69442961F2723C20091FFC5 /* ViewController.m in Sources */,
+				B69442931F2723C20091FFC5 /* AppDelegate.m in Sources */,
+				B69442901F2723C20091FFC5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B6326C781F1DA8C20074EA46 /* Main.storyboard */ = {
+		B69442971F2723C20091FFC5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6326C791F1DA8C20074EA46 /* Base */,
+				B69442981F2723C20091FFC5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B6326C7D1F1DA8C20074EA46 /* LaunchScreen.storyboard */ = {
+		B694429C1F2723C20091FFC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6326C7E1F1DA8C20074EA46 /* Base */,
+				B694429D1F2723C20091FFC5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -592,32 +589,26 @@
 			};
 			name = Release;
 		};
-		B6326C821F1DA8C20074EA46 /* Debug */ = {
+		B69442A11F2723C20091FFC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EDEAF64074E0785D98E3025 /* Pods-WDSocialSDKExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WDSocialSDKExample",
-				);
 				INFOPLIST_FILE = WDSocialSDKExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.coderhe.WDSocialSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B6326C831F1DA8C20074EA46 /* Release */ = {
+		B69442A21F2723C20091FFC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D218CD2F61E68EAC253FC86 /* Pods-WDSocialSDKExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WDSocialSDKExample",
-				);
 				INFOPLIST_FILE = WDSocialSDKExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.coderhe.WDSocialSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -645,11 +636,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6326C811F1DA8C20074EA46 /* Build configuration list for PBXNativeTarget "WDSocialSDKExample" */ = {
+		B69442A01F2723C20091FFC5 /* Build configuration list for PBXNativeTarget "WDSocialSDKExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6326C821F1DA8C20074EA46 /* Debug */,
-				B6326C831F1DA8C20074EA46 /* Release */,
+				B69442A11F2723C20091FFC5 /* Debug */,
+				B69442A21F2723C20091FFC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

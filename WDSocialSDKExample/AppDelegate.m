@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  WDSocialSDKExample
 //
-//  Created by 何伟东 on 2017/7/18.
+//  Created by 何伟东 on 2017/7/25.
 //  Copyright © 2017年 何伟东. All rights reserved.
 //
 
@@ -48,11 +48,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     if ([WDSocialManager handleOpenURL:url]) {
         return YES;
     }
     return YES;
 }
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    if ([WDSocialManager handleOpenURL:url]) {
+        return YES;
+    }
+    return YES;
+}
+
 
 @end

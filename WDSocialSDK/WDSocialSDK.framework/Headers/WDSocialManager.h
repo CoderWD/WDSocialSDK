@@ -77,7 +77,7 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
  */
 -(void)tencentAuthPermissions:(NSArray*)permissions
                      didLogin:(void(^)(TencentOAuth *auth))didLogin
-                  didNotLogin:(void(^)())didNotLogin
+                  didNotLogin:(void(^)(BOOL cancle))didNotLogin
                 didNotNetWork:(void(^)())didNotNetWork;
 
 

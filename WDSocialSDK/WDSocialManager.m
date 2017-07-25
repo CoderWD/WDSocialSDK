@@ -12,6 +12,7 @@
 
 typedef void(^WDTencentDidLoginBlock)(TencentOAuth *tencentOAuth);
 typedef void(^WDCommonNOParamBlock)();
+typedef void(^WDTencentDidNotLoginBlock)(BOOL cancle);
 
 static WDSocialManager *socialManager = nil;
 @interface WDSocialManager()<TencentSessionDelegate>{
@@ -23,7 +24,7 @@ static WDSocialManager *socialManager = nil;
 @property(nonatomic,strong) WDTencentDelegateImplement *tencentDelegateImplement;
 
 @property(nonatomic,copy) WDTencentDidLoginBlock tencentDidLoginBlock;
-@property(nonatomic,copy) WDCommonNOParamBlock tencentdidNotLoginBlock;
+@property(nonatomic,copy) WDTencentDidNotLoginBlock tencentdidNotLoginBlock;
 @property(nonatomic,copy) WDCommonNOParamBlock tencentdidNotNetWorkBlock;
 
 
@@ -211,7 +212,7 @@ static WDSocialManager *socialManager = nil;
  */
 -(void)tencentAuthPermissions:(NSArray*)permissions
              didLogin:(void(^)(TencentOAuth *auth))didLogin
-          didNotLogin:(void(^)())didNotLogin
+          didNotLogin:(void(^)(BOOL cancle))didNotLogin
         didNotNetWork:(void(^)())didNotNetWork{
     [self setTencentDidLoginBlock:didLogin];
     [self setTencentdidNotLoginBlock:didNotLogin];
@@ -251,7 +252,7 @@ static WDSocialManager *socialManager = nil;
  */
 - (void)tencentDidNotLogin:(BOOL)cancelled{
     if (self.tencentdidNotLoginBlock) {
-        self.tencentdidNotLoginBlock();
+        self.tencentdidNotLoginBlock(cancelled);
         self.tencentdidNotLoginBlock = nil;
     }
 }
