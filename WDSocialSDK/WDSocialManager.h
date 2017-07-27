@@ -112,7 +112,7 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
  */
 -(void)wechatAuthReq:(SendAuthReq*)req
       viewController:(UIViewController*)viewController
-         finishBlock:(void(^)(BaseResp *resp))finishBlock;
+         finishBlock:(void(^)(SendAuthResp *resp))finishBlock;
 
 
 @end

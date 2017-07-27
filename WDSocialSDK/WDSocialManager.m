@@ -12,6 +12,7 @@
 typedef void(^WDTencentDidLoginBlock)(TencentOAuth *tencentOAuth);
 typedef void(^WDCommonNOParamBlock)();
 typedef void(^WDTencentDidNotLoginBlock)(BOOL cancle);
+typedef void(^WDWechatLoginFinishBlock)(SendAuthResp *resp);
 
 static WDSocialManager *socialManager = nil;
 @interface WDSocialManager()<TencentSessionDelegate>{
@@ -22,9 +23,18 @@ static WDSocialManager *socialManager = nil;
 @property(nonatomic,copy) WDWeiboCompleteBlock weiboCompleteBlock;
 @property(nonatomic,strong) WDTencentDelegateImplement *tencentDelegateImplement;
 
+
+/**
+ QQ授权登录相关block
+ */
 @property(nonatomic,copy) WDTencentDidLoginBlock tencentDidLoginBlock;
 @property(nonatomic,copy) WDTencentDidNotLoginBlock tencentdidNotLoginBlock;
 @property(nonatomic,copy) WDCommonNOParamBlock tencentdidNotNetWorkBlock;
+
+/**
+ 微信登录完成block
+ */
+@property(nonatomic,copy) WDWechatLoginFinishBlock wechatLoginFinishBlock;
 
 
 @property(nonatomic,strong) TencentOAuth *tencentOAuth;
@@ -156,10 +166,11 @@ static WDSocialManager *socialManager = nil;
     if (self.wechatCompleteBlock) {
         self.wechatCompleteBlock(resp);
         self.wechatCompleteBlock = nil;
+    }else if (self.wechatLoginFinishBlock){
+        self.wechatCompleteBlock(resp);
+        self.wechatCompleteBlock = nil;
     }
 }
-
-
 
 
 
@@ -226,8 +237,8 @@ static WDSocialManager *socialManager = nil;
  */
 -(void)wechatAuthReq:(SendAuthReq*)req
       viewController:(UIViewController*)viewController
-         finishBlock:(void(^)(BaseResp *resp))finishBlock{
-    [self setWechatCompleteBlock:finishBlock];
+         finishBlock:(void(^)(SendAuthResp *resp))finishBlock{
+    [self setWechatLoginFinishBlock:finishBlock];
     [WXApi sendAuthReq:req viewController:viewController delegate:self];
 }
 
