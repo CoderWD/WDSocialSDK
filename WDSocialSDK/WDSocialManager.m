@@ -167,8 +167,8 @@ static WDSocialManager *socialManager = nil;
         self.wechatCompleteBlock(resp);
         self.wechatCompleteBlock = nil;
     }else if (self.wechatLoginFinishBlock){
-        self.wechatCompleteBlock(resp);
-        self.wechatCompleteBlock = nil;
+        self.wechatLoginFinishBlock(resp);
+        self.wechatLoginFinishBlock = nil;
     }
 }
 
