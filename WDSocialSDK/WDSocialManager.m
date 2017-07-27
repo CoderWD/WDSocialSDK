@@ -282,6 +282,7 @@ static WDSocialManager *socialManager = nil;
 - (void)onResp:(QQBaseResp *)resp{
     if (self.socialManager.tencentCompleteBlock) {
         self.socialManager.tencentCompleteBlock(resp);
+        self.socialManager.tencentCompleteBlock = nil;
     }
 }
 
