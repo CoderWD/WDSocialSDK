@@ -81,12 +81,20 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
 -(void)shareMessageToWeibo:(WBBaseRequest*)messageReq completeBlock:(WDWeiboCompleteBlock)block;
 
 /**
- 分享信息到腾讯
+ 分享信息到QQ
  
  @param messageReq <#messageReq description#>
  @param block <#block description#>
  */
--(void)shareMessageToTencent:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block;
+-(void)shareMessageToQQ:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block;
+
+/**
+ 分享信息到QQ空间
+ 
+ @param messageReq <#messageReq description#>
+ @param block <#block description#>
+ */
+-(void)shareMessageToQZone:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block;
 
 
 /**

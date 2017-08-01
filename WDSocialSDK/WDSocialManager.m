@@ -167,7 +167,7 @@ static WDSocialManager *socialManager = nil;
         self.wechatCompleteBlock(resp);
         self.wechatCompleteBlock = nil;
     }else if (self.wechatLoginFinishBlock){
-        self.wechatLoginFinishBlock(resp);
+        self.wechatLoginFinishBlock((SendAuthResp*)resp);
         self.wechatLoginFinishBlock = nil;
     }
 }
@@ -199,14 +199,25 @@ static WDSocialManager *socialManager = nil;
 }
 
 /**
- 分享信息到腾讯
+ 分享信息到QQ
  
  @param messageReq <#messageReq description#>
  @param block <#block description#>
  */
--(void)shareMessageToTencent:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block{
+-(void)shareMessageToQQ:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block{
     [self setTencentCompleteBlock:block];
     [QQApiInterface sendReq:messageReq];
+}
+
+/**
+ 分享信息到QQ空间
+
+ @param messageReq <#messageReq description#>
+ @param block <#block description#>
+ */
+-(void)shareMessageToQZone:(QQBaseReq*)messageReq completeBlock:(WDTencentCompleteBlock)block{
+    [self setTencentCompleteBlock:block];
+    [QQApiInterface SendReqToQZone:messageReq];
 }
 
 /**
