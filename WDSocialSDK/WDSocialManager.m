@@ -15,7 +15,7 @@ typedef void(^WDTencentDidNotLoginBlock)(BOOL cancle);
 typedef void(^WDWechatLoginFinishBlock)(SendAuthResp *resp);
 
 static WDSocialManager *socialManager = nil;
-@interface WDSocialManager()<TencentSessionDelegate>{
+@interface WDSocialManager(){
     
 }
 @property(nonatomic,copy) WDWechatCompleteBlock wechatCompleteBlock;
@@ -73,7 +73,7 @@ static WDSocialManager *socialManager = nil;
  @param appKey <#appKey description#>
  */
 -(void)setTencentAppKey:(NSString*)appKey{
-    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:self];
+    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:_tencentDelegateImplement];
 }
 
 /**
@@ -253,41 +253,14 @@ static WDSocialManager *socialManager = nil;
     [WXApi sendAuthReq:req viewController:viewController delegate:self];
 }
 
-
-/**
- * 登录成功后的回调
- */
-- (void)tencentDidLogin{
-    if (self.tencentDidLoginBlock) {
-        self.tencentDidLoginBlock(self.tencentOAuth);
-        self.tencentDidLoginBlock = nil;
-    }
-}
-
-/**
- * 登录失败后的回调
- * \param cancelled 代表用户是否主动退出登录
- */
-- (void)tencentDidNotLogin:(BOOL)cancelled{
-    if (self.tencentdidNotLoginBlock) {
-        self.tencentdidNotLoginBlock(cancelled);
-        self.tencentdidNotLoginBlock = nil;
-    }
-}
-
-/**
- * 登录时网络有问题的回调
- */
-- (void)tencentDidNotNetWork{
-    if (self.tencentdidNotNetWorkBlock) {
-        self.tencentdidNotNetWorkBlock();
-        self.tencentdidNotNetWorkBlock = nil;
-    }
-}
-
-
 @end
 
+
+
+
+@interface WDTencentDelegateImplement ()<TencentSessionDelegate>
+
+@end
 
 @implementation WDTencentDelegateImplement
 
@@ -313,6 +286,39 @@ static WDSocialManager *socialManager = nil;
  */
 - (void)isOnlineResponse:(NSDictionary *)response{
     
+}
+
+
+
+/**
+ * 登录成功后的回调
+ */
+- (void)tencentDidLogin{
+    if (self.socialManager.tencentDidLoginBlock) {
+        self.socialManager.tencentDidLoginBlock(self.socialManager.tencentOAuth);
+        self.socialManager.tencentDidLoginBlock = nil;
+    }
+}
+
+/**
+ * 登录失败后的回调
+ * \param cancelled 代表用户是否主动退出登录
+ */
+- (void)tencentDidNotLogin:(BOOL)cancelled{
+    if (self.socialManager.tencentdidNotLoginBlock) {
+        self.socialManager.tencentdidNotLoginBlock(cancelled);
+        self.socialManager.tencentdidNotLoginBlock = nil;
+    }
+}
+
+/**
+ * 登录时网络有问题的回调
+ */
+- (void)tencentDidNotNetWork{
+    if (self.socialManager.tencentdidNotNetWorkBlock) {
+        self.socialManager.tencentdidNotNetWorkBlock();
+        self.socialManager.tencentdidNotNetWorkBlock = nil;
+    }
 }
 
 @end
