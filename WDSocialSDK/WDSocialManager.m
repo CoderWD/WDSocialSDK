@@ -72,8 +72,8 @@ static WDSocialManager *socialManager = nil;
  
  @param appKey <#appKey description#>
  */
-+(void)setTencentAppKey:(NSString*)appKey{
-    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:[WDSocialManager manager]];
+-(void)setTencentAppKey:(NSString*)appKey{
+    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:self];
 }
 
 /**
@@ -81,7 +81,7 @@ static WDSocialManager *socialManager = nil;
  
  @param appKey <#appKey description#>
  */
-+(void)setWeiboAppKey:(NSString*)appKey{
+-(void)setWeiboAppKey:(NSString*)appKey{
     [WeiboSDK registerApp:appKey];
 }
 
@@ -90,7 +90,7 @@ static WDSocialManager *socialManager = nil;
  
  @param appKey <#appKey description#>
  */
-+(void)setWeChatAppKey:(NSString*)appKey{
+-(void)setWeChatAppKey:(NSString*)appKey{
     [WXApi registerApp:appKey];
 }
 

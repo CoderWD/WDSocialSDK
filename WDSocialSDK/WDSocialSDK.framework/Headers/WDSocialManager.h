@@ -40,20 +40,20 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
  
  @param appKey <#appKey description#>
  */
-+(void)setTencentAppKey:(NSString*)appKey;
+-(void)setTencentAppKey:(NSString*)appKey;
 
 /**
  初始化微博
  
  @param appKey <#appKey description#>
  */
-+(void)setWeiboAppKey:(NSString*)appKey;
+-(void)setWeiboAppKey:(NSString*)appKey;
 /**
  初始化微信
  
  @param appKey <#appKey description#>
  */
-+(void)setWeChatAppKey:(NSString*)appKey;
+-(void)setWeChatAppKey:(NSString*)appKey;
     
 
 /**
