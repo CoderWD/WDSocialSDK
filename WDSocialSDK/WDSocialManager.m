@@ -70,7 +70,7 @@ static WDSocialManager *socialManager = nil;
  @param appKey <#appKey description#>
  */
 -(void)setTencentAppKey:(NSString*)appKey{
-    [WDSocialManager manager].tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:_tencentDelegateImplement];
+    _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appKey andDelegate:_tencentDelegateImplement];
 }
 
 /**
@@ -134,9 +134,9 @@ static WDSocialManager *socialManager = nil;
     }else if ([response isKindOfClass:WBAuthorizeResponse.class]){//授权结果
         
     }
-    if (self.weiboCompleteBlock) {
-        self.weiboCompleteBlock(response);
-        self.weiboCompleteBlock = nil;
+    if (_weiboCompleteBlock) {
+        _weiboCompleteBlock(response);
+        _weiboCompleteBlock = nil;
     }
 }
 
@@ -160,12 +160,12 @@ static WDSocialManager *socialManager = nil;
  * @param resp 具体的回应内容，是自动释放的
  */
 -(void) onResp:(BaseResp*)resp{
-    if (self.wechatCompleteBlock) {
-        self.wechatCompleteBlock(resp);
-        self.wechatCompleteBlock = nil;
-    }else if (self.wechatLoginFinishBlock){
-        self.wechatLoginFinishBlock((SendAuthResp*)resp);
-        self.wechatLoginFinishBlock = nil;
+    if (_wechatCompleteBlock) {
+        _wechatCompleteBlock(resp);
+        _wechatCompleteBlock = nil;
+    }else if (_wechatLoginFinishBlock){
+        _wechatLoginFinishBlock((SendAuthResp*)resp);
+        _wechatLoginFinishBlock = nil;
     }
 }
 
@@ -232,7 +232,7 @@ static WDSocialManager *socialManager = nil;
     [self setTencentDidLoginBlock:didLogin];
     [self setTencentdidNotLoginBlock:didNotLogin];
     [self setTencentdidNotNetWorkBlock:didNotNetWork];
-    [self.tencentOAuth authorize:permissions inSafari:![QQApiInterface isQQInstalled]];
+    [_tencentOAuth authorize:permissions inSafari:![QQApiInterface isQQInstalled]];
     
 }
 
@@ -269,9 +269,9 @@ static WDSocialManager *socialManager = nil;
  处理来至QQ的响应
  */
 - (void)onResp:(QQBaseResp *)resp{
-    if (self.socialManager.tencentCompleteBlock) {
-        self.socialManager.tencentCompleteBlock(resp);
-        self.socialManager.tencentCompleteBlock = nil;
+    if (_socialManager.tencentCompleteBlock) {
+        _socialManager.tencentCompleteBlock(resp);
+        _socialManager.tencentCompleteBlock = nil;
     }
 }
 
@@ -288,9 +288,9 @@ static WDSocialManager *socialManager = nil;
  * 登录成功后的回调
  */
 - (void)tencentDidLogin{
-    if (self.socialManager.tencentDidLoginBlock) {
-        self.socialManager.tencentDidLoginBlock(self.socialManager.tencentOAuth);
-        self.socialManager.tencentDidLoginBlock = nil;
+    if (_socialManager.tencentDidLoginBlock) {
+        _socialManager.tencentDidLoginBlock(_socialManager.tencentOAuth);
+        _socialManager.tencentDidLoginBlock = nil;
     }
 }
 
@@ -299,9 +299,9 @@ static WDSocialManager *socialManager = nil;
  * \param cancelled 代表用户是否主动退出登录
  */
 - (void)tencentDidNotLogin:(BOOL)cancelled{
-    if (self.socialManager.tencentdidNotLoginBlock) {
-        self.socialManager.tencentdidNotLoginBlock(cancelled);
-        self.socialManager.tencentdidNotLoginBlock = nil;
+    if (_socialManager.tencentdidNotLoginBlock) {
+        _socialManager.tencentdidNotLoginBlock(cancelled);
+        _socialManager.tencentdidNotLoginBlock = nil;
     }
 }
 
@@ -309,9 +309,9 @@ static WDSocialManager *socialManager = nil;
  * 登录时网络有问题的回调
  */
 - (void)tencentDidNotNetWork{
-    if (self.socialManager.tencentdidNotNetWorkBlock) {
-        self.socialManager.tencentdidNotNetWorkBlock();
-        self.socialManager.tencentdidNotNetWorkBlock = nil;
+    if (_socialManager.tencentdidNotNetWorkBlock) {
+        _socialManager.tencentdidNotNetWorkBlock();
+        _socialManager.tencentdidNotNetWorkBlock = nil;
     }
 }
 
