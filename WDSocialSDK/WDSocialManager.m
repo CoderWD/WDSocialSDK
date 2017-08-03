@@ -36,9 +36,6 @@ static WDSocialManager *socialManager = nil;
  */
 @property(nonatomic,copy) WDWechatLoginFinishBlock wechatLoginFinishBlock;
 
-
-@property(nonatomic,strong) TencentOAuth *tencentOAuth;
-
 @end
 
 
@@ -258,9 +255,6 @@ static WDSocialManager *socialManager = nil;
 
 
 
-@interface WDTencentDelegateImplement ()<TencentSessionDelegate>
-
-@end
 
 @implementation WDTencentDelegateImplement
 

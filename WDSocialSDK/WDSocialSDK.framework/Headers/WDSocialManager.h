@@ -27,6 +27,8 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
 
 @interface WDSocialManager : NSObject<WXApiDelegate,WeiboSDKDelegate>
 
+@property(nonatomic,strong) TencentOAuth *tencentOAuth;
+
 /**
  实例
  
@@ -125,7 +127,7 @@ typedef void(^WDWeiboCompleteBlock)(WBBaseResponse *resp);
 
 @end
 
-@interface WDTencentDelegateImplement : NSObject<QQApiInterfaceDelegate>
+@interface WDTencentDelegateImplement : NSObject<QQApiInterfaceDelegate,TencentSessionDelegate>
 @property(nonatomic,weak) WDSocialManager *socialManager;
 
 @end
